@@ -2,7 +2,7 @@
   --基础语言: HTML、CSS、JavaScript </br>--辅助语言：NodeJS、Scss、axios  </br>--辅助框架：Element、Echarts、iView
   
   --核心语言：Vue（由基于Vue2的Vue-cli框架搭建）
-  
+  </br></br></br>
   
   --开发目的：用于城市消防的远程监控，降低并防范区域的消防事件发生。
   
