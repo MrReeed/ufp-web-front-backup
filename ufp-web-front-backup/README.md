@@ -1,7 +1,7 @@
 # 💻城市消防远程监控系统——前端
-  --<em>在线网址：http://ufp.lixiaole.com/ </em></br>
-  --<em>登录账号：admin或tiyan</em></br>
-  --<em>登录密码：123456</em></br>
+  ◼<em>在线网址：http://ufp.lixiaole.com/ </em></br>
+  ◼<em>登录账号：admin或tiyan</em></br>
+  ◼<em>登录密码：123456</em></br></br>
   --基础语言：HTML、CSS、JavaScript </br>--辅助语言：NodeJS、Scss、axios  </br>--辅助框架：Element、Echarts、iView
   
   --核心语言：Vue（由基于Vue2的Vue-cli框架搭建）
