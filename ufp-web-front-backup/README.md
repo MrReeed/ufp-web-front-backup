@@ -4,6 +4,7 @@
   ◼<em>登录账号：admin或tiyan</em></br>
   ◼<em>登录密码：123456</em></br>
   ## 基本概述
+  （前言）由于项目搁置，原托管地址为私有地址，将代码备份并加以描述放到个人仓库中
   --基础语言：HTML、CSS、JavaScript </br>--辅助语言：NodeJS、Scss、axios  </br>--辅助框架：Element、Echarts、iView
   
   --核心语言：Vue（由基于Vue2的Vue-cli框架搭建）
