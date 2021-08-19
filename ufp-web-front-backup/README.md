@@ -19,6 +19,8 @@
 
 --实现功能：登录校验、接口配置
 
+--后端服务器由阿里云提供
+
 ## 基础配置
 
 API URL位于src/utils/global.js文件中，当前debug API URL为
