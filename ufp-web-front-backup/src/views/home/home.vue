@@ -1,0 +1,160 @@
+<template>
+  <div id="data-view">
+    <HomeMap :center="center" :zoom="12"/>
+  </div>
+</template>
+
+<script>
+import HomeMap from './components/HomeMap'
+
+export default {
+  components: {
+    HomeMap
+  },
+  data() {
+    return {
+      center: { lng: 121.337445, lat: 37.4874 },
+      zoom: 3,
+      markerPointlist: [{ lng: 121.387445, lat: 37.5374, showFlag: false, message: '1' }, {
+        lng: 121.388445,
+        lat: 37.54474,
+        showFlag: false,
+        message: '2'
+      }, { lng: 121.388445, lat: 37.55574, showFlag: false, message: '3' }],
+      mapwidth: 24,
+      dashboarddata: {
+        firealarm: 5,
+        electricalfirewarning: 16,
+        fireservicefailure: 43073,
+        monitoringequipmentanomaly: 661,
+        outdoor: 473751,
+        report: 7
+      }
+    }
+  },
+  methods: {
+    changewidth() {
+      if (this.mapwidth === 10) {
+        this.mapwidth = 24
+      } else {
+        this.mapwidth = 10
+      }
+    },
+    handleSetLineChartData(type) {
+      this.$emit('handleSetLineChartData', type)
+    },
+    redirectto(path) {
+      this.$router.push(path)
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+.bm-view {
+  width: 100%;
+  height: 600px;
+}
+
+/*去掉百度地图的logo*/
+.BMap_cpyCtrl {
+  display: none;
+}
+
+.anchorBL {
+  a {
+    display: none;
+  }
+
+  /*display: none;*/
+}
+
+.panel-group {
+  margin-top: 18px;
+
+  .card-panel-col {
+    //margin-bottom: 32px;
+  }
+
+  .card-panel {
+    height: 108px;
+    cursor: pointer;
+    font-size: 12px;
+    position: relative;
+    overflow: hidden;
+    color: #666;
+    background: #fff;
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, .05);
+    border-color: rgba(0, 0, 0, .05);
+
+    &:hover {
+      .card-panel-icon-wrapper {
+        color: #fff;
+      }
+
+      .icon-people {
+        background: #40c9c6;
+      }
+
+      .icon-message {
+        background: #36a3f7;
+      }
+
+      .icon-money {
+        background: #f4516c;
+      }
+
+      .icon-shopping {
+        background: #34bfa3
+      }
+    }
+
+    .icon-people {
+      color: #40c9c6;
+    }
+
+    .icon-message {
+      color: #36a3f7;
+    }
+
+    .icon-money {
+      color: #f4516c;
+    }
+
+    .icon-shopping {
+      color: #34bfa3
+    }
+
+    .card-panel-icon-wrapper {
+      float: left;
+      margin: 14px 0 0 14px;
+      padding: 16px;
+      transition: all 0.38s ease-out;
+      border-radius: 6px;
+    }
+
+    .card-panel-icon {
+      float: left;
+      font-size: 48px;
+    }
+
+    .card-panel-description {
+      float: right;
+      font-weight: bold;
+      margin: 26px;
+      margin-left: 0px;
+
+      .card-panel-text {
+        line-height: 18px;
+        color: rgba(0, 0, 0, 0.45);
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+
+      .card-panel-num {
+        font-size: 20px;
+      }
+    }
+  }
+}
+</style>
